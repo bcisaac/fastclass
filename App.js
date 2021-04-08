@@ -2,12 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+const schedule = {
+  title: "CS Courses for 2020-2021"
+};
+
+const App = () => {
   return (
     <View style={styles.container}>
-    <Text style={styles.textStyle}>Welcome to my app!</Text>
+      <Text style={styles.bannerStyle}>{schedule.title}</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -17,9 +21,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textStyle: {
-    fontFamily: "fantasy",
+  bannerStyle: {
+    fontFamily: "Garamond",
     color: '#868B8E',
     fontSize:32,
   }
 });
+
+export default App

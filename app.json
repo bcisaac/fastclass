@@ -26,6 +26,7 @@
       }
     },
     "web": {
+      "name": "FastClasse Course Scheduler",
       "favicon": "./assets/favicon.png"
     }
   }
