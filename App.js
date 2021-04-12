@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text} from 'react-native';
+
+import CourseList from './components/CourseList';
 
 const schedule = {
   "title": "CS Courses for 2020-2021",
@@ -41,26 +43,6 @@ const Banner = ({title}) => (
   <Text style  = {styles.bannerStyle}>{title}</Text>
 );
 
-const CourseList = ({courses}) => (
-  <ScrollView>
-    <View style={styles.courseList}>
-      {courses.map(course => <Course key={course.id} course={course} />)}
-    </View>
-  </ScrollView>
-);
-
-const getCourseNumber = course => (
-  course.id.slice(1)
-);
-
-const Course = ({course}) => (
-  <TouchableOpacity style={styles.courseButton}>
-    <Text style={styles.courseText}>
-      {`CS ${getCourseNumber(course)}\n${course.meets}`}
-    </Text>
-  </TouchableOpacity>
-);
-
 /* 
   Ivory: #EEEDE7
   Gray: #868B8E
@@ -77,32 +59,9 @@ const styles = StyleSheet.create({
     paddingTop:20,
   },
   bannerStyle: {
-    fontFamily: "Garamond",
-    color: '#868B8E',
+    fontFamily: 'Georgia',
+    color: '#F0B4A9',
     fontSize:32,
-  },
-  courseList: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  courseButton: {
-    flex: 1, borderRadius: 5,
-    justifyContent: 'center',
-    alignnItems: 'center',
-    margin: 10,
-    height: 60,
-    padding: 10,
-    minWidth: 90,
-    maxWidth: 90,
-    backgroundColor: '#F0B4A9',
-  },
-  courseText:{
-    color: '#EEEDE7',
-    fontSize: 12,
-    textAlign: 'center'
   },
 });
 
