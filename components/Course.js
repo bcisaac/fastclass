@@ -17,8 +17,10 @@ const Course = ({course, isSelected, select, isDisabled}) => (
 /* 
 Ivory: #EEEDE7
   Ivory Disabled: #E2DED0
-Gray: #868B8E
 Pewter: #B9B7BD
+  Gray: #868B8E
+  Purple Pewter: #C9CAD8
+
 Scallop Seashell: #E7D2CC
   Darker: #F0B4A9
 */
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
   },
   courseButtonDisabled: {
     ...courseButtonBase,
-    backgroundColor: '#E2DED0'
+    backgroundColor: '#C9CAD8'
   },
   courseButton: {
     ...courseButtonBase,
