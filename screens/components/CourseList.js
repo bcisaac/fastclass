@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
-import { getCourseTerm, getCourseNumber, hasConflict, terms } from './utils/courses';
+import { getCourseTerm, getCourseNumber, hasConflict, terms } from './utils/course';
 import CourseSelector from './CourseSelector'
 import TermSelector from './TermSelector'
 
-const CourseList = ({courses}) => {
+const CourseList = ({courses, view}) => {
   const [selectedTerm, setSelectedTerm] = useState('Spring');
   const termCourses = courses.filter(course => selectedTerm === getCourseTerm(course));
 
   return(
     <ScrollView>
       <TermSelector terms={terms} selectedTerm={selectedTerm} setSelectedTerm={setSelectedTerm}/>
-      <CourseSelector courses={termCourses} />
+      <CourseSelector courses={termCourses} view={view} />
     </ScrollView>
   );
 };

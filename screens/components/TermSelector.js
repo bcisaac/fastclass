@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { terms } from './utils/courses';
+import { terms } from './utils/course';
 
 const TermButton = ({term, setSelectedTerm, isActive}) => (
   <TouchableOpacity style={styles[isActive ?'termButtonActive' : 'termButton']}
