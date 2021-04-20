@@ -1,14 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { SafeAreaView, StyleSheet, Text} from 'react-native';
 
+import UserContext from './UserContext';
 import CourseList from './components/CourseList';
+import CourseEditScreen from './CourseEditScreen';
 
 const ScheduleScreen = ({navigation}) => {
   const [schedule, setSchedule] = useState({ title: '', courses: [] });
+  const user = useContext(UserContext)
+  const canEdit = user && user.role === 'admin'
 
   const view = (course) => {
-    navigation.navigate('CourseDetailScreen', { course });
+    navigation.navigate(canEdit ? 'CourseEditScreen' : 'CourseDetailScreen', { course });
   };
 
   const url = 'https://courses.cs.northwestern.edu/394/data/cs-courses.php'

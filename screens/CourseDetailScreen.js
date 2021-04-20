@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-const Field = ({label, value}) => {
+const Field = ({ label, value }) => {
   return (
     <View style={styles.fieldContainer}>
       <Text style={styles.label}>{label}</Text>
@@ -10,7 +10,7 @@ const Field = ({label, value}) => {
   );
 };
 
-const CourseDetailScreen = ({route}) => {
+const CourseDetailScreen = ({ route }) => {
   const course = route.params.course;
 
   return (
