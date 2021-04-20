@@ -1,9 +1,9 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import { Form } from 'formik';
+import Form from './components/Form';
 import * as Yup from 'yup';
 
-const CourseEditScreen = ({navigation, route}) => {
+const CourseEditScreen = ({ navigation, route }) => {
   const course = route.params.course;
 
   return (
