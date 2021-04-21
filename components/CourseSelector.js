@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import Course from './Course'
-import { hasConflict } from './utils/course';
+import { hasConflict } from '../utils/course';
 
 const CourseSelector = ({courses, view}) => {
   const [selected, setSelected] = useState([]);

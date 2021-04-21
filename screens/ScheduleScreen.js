@@ -3,9 +3,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import { SafeAreaView, StyleSheet, Text} from 'react-native';
 
 import UserContext from './UserContext';
-import CourseList from './components/CourseList';
+import CourseList from '../components/CourseList';
 import CourseEditScreen from './CourseEditScreen';
-import { firebase } from '../firebase'
+import { firebase } from '../utils/firebase'
 
 const fixCourses = json => ({
   ...json,
