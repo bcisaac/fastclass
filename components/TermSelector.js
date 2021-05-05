@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { terms } from '../utils/course';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const TermButton = ({term, setSelectedTerm, isActive}) => (
   <TouchableOpacity style={styles[isActive ?'termButtonActive' : 'termButton']}
@@ -11,7 +10,7 @@ const TermButton = ({term, setSelectedTerm, isActive}) => (
   
 const TermSelector = ({terms, selectedTerm, setSelectedTerm}) => (
   <View style={styles.termSelector}>
-      { 
+      {
         terms.map(term => (
             <TermButton key={term} term={term} setSelectedTerm={setSelectedTerm}
             isActive={term === selectedTerm}

@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect, useContext } from 'react';
 import { SafeAreaView, StyleSheet, Text} from 'react-native';
 
-import UserContext from './UserContext';
+import UserContext from '../UserContext';
 import CourseList from '../components/CourseList';
 import CourseEditScreen from './CourseEditScreen';
 import { firebase } from '../utils/firebase'

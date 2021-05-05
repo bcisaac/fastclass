@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
-import { getCourseTerm, getCourseNumber, hasConflict, terms } from '../utils/course';
+import { getCourseTerm, terms } from '../utils/course';
 import CourseSelector from './CourseSelector'
 import TermSelector from './TermSelector'
 
