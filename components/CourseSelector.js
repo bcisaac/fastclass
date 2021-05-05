@@ -15,7 +15,8 @@ const CourseSelector = ({courses, view}) => {
     <View style={styles.courseList}>
       {
         courses.map(course => (
-          <Course key={courses.id} course={course}
+          <Course key={course.id} 
+            course={course}
             select={toggle}
             isSelected={selected.includes(course)}
             isDisabled={hasConflict(course,selected)}
